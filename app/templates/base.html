@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>ToDoList-Flask-App</title>
+</head>
+<body>
+    <h1>To-do list</h1>
+    {% block form %}
+    {% endblock %}
+
+    {% block filters %}
+    {% endblock %}
+
+    {% block todos %}
+    {% endblock %}
+    
+    <p style="position:absolute;top:0;right:0;width:100%;margin:auto;box-shadow: 0px 0px 20px #28B463;">
+	The icons used in this project were taken from 
+	<a href="https://fontawesome.com" style="text-decoration:none;color:#000;">
+	   Font Awesome
+	</a>
+     </p>
+</body>
+</html>

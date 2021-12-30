@@ -1,0 +1,258 @@
+/*Gemeral*/
+body {
+    background-color: #58D68D;
+    font-family: sans-serif;
+    min-height: 100vh;
+    margin: auto;
+    padding: 0 10rem 3rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6em;
+    margin: 0.67em 0;
+}
+
+/*Form CreateTask*/
+#todo_creator {
+    height: 3rem;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+    background-color: #58D68D;
+    box-shadow: 0px 0px 20px #28B463;
+    overflow: hidden;
+}
+
+#dt_inputs {
+    display: flex;
+}
+
+#todo {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    overflow: hidden;
+    resize: none;
+}
+
+#date, #time, #submit {
+    background-color: #28B463;
+    border: 2px solid transparent;
+    transition-duration: .5s;
+    padding: 1rem;
+    min-width: 15%;
+    cursor: pointer;
+}
+
+#time, #submit {
+    border-left: 2px solid  #58D68D;
+}
+
+#submit {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#time {
+    min-width: 10%;
+}
+
+#todo:focus, #date:focus, #time:focus {
+    outline: none;
+}
+
+#date:hover, #time:hover, #submit:hover {
+    background-color: #58D68D;
+    border: 2px solid #28B463;
+    transition-duration: .5s;
+}
+/*Filters*/
+.filters {
+    margin: 5% 0 2%;
+    display: flex;
+}
+
+.filter {
+    background-color: #58D68D;
+    box-shadow: 0px 0px 20px #28B463;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition-duration: .5s;
+    min-width: 26%;
+    padding: 10px;
+    margin: auto;
+    text-decoration: none;
+    color: #000;
+}
+
+.filter:first-child {
+    margin-left: 0;
+}
+
+.filter:nth-child(3) {
+    margin-right: 0;
+}
+
+.filter:hover {
+    border: 2px solid #28B463;
+    transition-duration: .5s;
+}
+
+/*ToDos container*/
+#todos_container {
+    padding: 3% 0;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-auto-rows: 10rem;
+}
+
+/*ToDos*/
+.todo {
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    position: relative;
+    word-wrap: break-word;
+    text-align: justify;
+    box-shadow: 0px 0px 20px #28B463;
+    border-radius: 10px;
+}
+
+.todo p {
+    margin: auto;
+}
+
+/*Original*/
+
+.date {
+    position: absolute;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 40px #28B463;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*Overlay*/
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height:100%;   
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transition-duration: .3s;
+    background-color: #000;
+    opacity: 0;
+
+}
+
+.todo:hover .overlay {
+    transition-duration: .3s;
+    opacity: 75%;
+}
+
+/*Overlay Content*/
+
+.buttons {
+    position: absolute;
+    right: 0;
+    padding: 20px 20px 0 0;
+}
+
+.buttons a {
+    margin-left: 10px;
+}
+
+.buttons a i {
+    color: #58D68D;
+    transition-duration: .2s;
+}
+
+.buttons a i:hover {
+    color: #28B463;
+    transform: scale(1.5);
+    transition-duration: .2s;
+}
+
+.buttons a i:active {
+    transform: scale(.7);
+    transition-duration: .2s;
+}
+
+.time {
+    display: flex;
+    height: 100%;
+    color: #58D68D;
+}
+
+
+@media only screen and (max-width: 850px) {
+    body {
+        padding: 0 5rem 3rem;
+    }
+    #todo_creator {
+      display: grid;
+      height: auto;
+    }
+    #dt_inputs {
+        width: 100%;
+    }
+    #date, #time, #submit {
+        margin: auto;
+        width: 33%;
+        box-sizing: border-box;
+        height: 100%
+    }
+    
+    #submit {
+        border-top-right-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        padding: 0 1rem 3rem;
+    }
+    
+    #todo_creator {
+      display: grid;
+      height: auto;
+    }
+    #dt_inputs {
+        display: grid;
+    }
+    #date, #time, #submit {
+        display: inline;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    #time, #submit {
+        border-top: 2px solid  #58D68D;
+        border-left: 2px solid #28B463;
+    }
+
+    #submit {
+        height: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .filters {
+        display: grid;
+    }
+
+    .filter {
+        width: 100%;
+        box-sizing: border-box;
+        margin: .5rem auto;
+    }
+}
