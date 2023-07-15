@@ -11,7 +11,7 @@ In this project I will use `SQLite` as a database administrator and it is recomm
 ## Start 🏁
 Clone the repository.
 ```
-$ git clone https://github.com/Angel-Gabriel-Chavez/ToDoList-Flask-App.git
+$ git clone https://github.com/angcoder-c/ToDoList-Flask-App.git
 ```
 Create the virtual environment, and activate it.
 ```
